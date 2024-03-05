@@ -24,6 +24,13 @@ pipeline {
             steps {
                 sh 'mvn clean package'
             }
+        }
+         stage('Date-Publish'){
+             steps{
+                 sh 'date'
+                 echo 'Muralidhar reddy'
+             }
+         }
             post {
                 success {
                     //archiveArtifacts './web/target/*.war'
