@@ -27,7 +27,7 @@ pipeline {
             post {
                 success {
                     //archiveArtifacts './web/target/*.war'
-                    sh 'aws configure set region ap-southeast-2'
+                    sh 'aws configure set region ap-south-1'
                     sh 'aws s3 cp ./web/target/*.war s3://muralihub'
                 }
             }
